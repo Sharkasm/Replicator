@@ -5,13 +5,13 @@
 #include <memory>
 
 
-class Individual;
+#include "Individual.h"
 
 
 class Population
 {
 public:
-    Population( unsigned int reserveSize );
+    explicit Population( unsigned int reserveSize );
     ~Population();
 
     Individual* get( unsigned int i ) { return m_group.at( i ).get(); };
